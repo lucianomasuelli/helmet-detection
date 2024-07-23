@@ -1,0 +1,8 @@
+path: /home/luciano/Documentos/helmet_detection/helmetDetection/data
+train: images/train
+val: images/train
+
+names:
+  0: helmet
+  1: motorcycle
+  2: bicycle

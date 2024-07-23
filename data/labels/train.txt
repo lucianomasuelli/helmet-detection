@@ -1,0 +1,33 @@
+data/obj_train_data/Captura de pantalla de 051.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 051.mp4.png
+data/obj_train_data/Captura de pantalla de 052.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 052.mp4 - 2.png
+data/obj_train_data/Captura de pantalla de 052.mp4.png
+data/obj_train_data/Captura de pantalla de 053.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 053.mp4 - 2.png
+data/obj_train_data/Captura de pantalla de 053.mp4 - 3.png
+data/obj_train_data/Captura de pantalla de 053.mp4.png
+data/obj_train_data/Captura de pantalla de 054.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 054.mp4 - 2.png
+data/obj_train_data/Captura de pantalla de 054.mp4.png
+data/obj_train_data/Captura de pantalla de 055.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 055.mp4 - 2.png
+data/obj_train_data/Captura de pantalla de 055.mp4.png
+data/obj_train_data/Captura de pantalla de 056.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 056.mp4 - 2.png
+data/obj_train_data/Captura de pantalla de 056.mp4.png
+data/obj_train_data/Captura de pantalla de 057.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 057.mp4.png
+data/obj_train_data/Captura de pantalla de 058.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 058.mp4.png
+data/obj_train_data/Captura de pantalla de 059.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 059.mp4.png
+data/obj_train_data/Captura de pantalla de 060.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 060.mp4.png
+data/obj_train_data/Captura de pantalla de 061.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 061.mp4.png
+data/obj_train_data/Captura de pantalla de 062.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 062.mp4.png
+data/obj_train_data/Captura de pantalla de 063.mp4 - 1.png
+data/obj_train_data/Captura de pantalla de 063.mp4.png
+data/obj_train_data/Captura de pantalla de 064.mp4.png
