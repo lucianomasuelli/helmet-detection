@@ -1,0 +1,9 @@
+path: C:\Users\User\PycharmProjects\yolov8
+train: images/train
+val: images/train
+
+# Classes
+names:
+  0: Helmet
+  1: Bicycle
+  2: Motorcycle
