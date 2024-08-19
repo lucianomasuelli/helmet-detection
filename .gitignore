@@ -1,5 +1,11 @@
-*/videos
-*/images
+/train
 /codigo-fran/labels/
 */.idea
 /.idea
+train.cache
+/runs
+.DS_Store
+*/__pycache__
+*/.ipynb_checkpoints
+*/.vscode
+*/.pytest
