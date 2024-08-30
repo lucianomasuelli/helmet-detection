@@ -1,4 +1,4 @@
-path: C:\Users\User\PycharmProjects\yolov8
+path: /home/luciano/Documentos/helmet_detection/helmetDetection/train_mini
 train: images/train
 val: images/train
 

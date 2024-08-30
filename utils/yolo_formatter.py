@@ -57,6 +57,31 @@ def convert_yolo_annotations(annotations_path, annotations_folder):
                 )
 
 
+def normalize_format(annotations_folder, img_width, img_height):
+    #recorrer todos los archivos de la carpeta
+    for file in os.listdir(annotations_folder):
+        with open(os.path.join(annotations_folder, file), 'r') as f: #abrir el archivo
+            lines = f.readlines() #leer todas las lineas
+        with open(os.path.join(annotations_folder, file), 'w') as f:
+            for line in lines: # recorrer todas las lineas
+                # dentro de cada linea, la primer parlabra es la clase, las demas son bb_left, bb_top, bb_width, bb_height separados por espacios
+                class_id, bb_left, bb_top, bb_width, bb_height = map(int, line.split(' '))
+
+                # Calcular el centro del cuadro delimitador
+                x_center = bb_left + (bb_width / 2.0)
+                y_center = bb_top + (bb_height / 2.0)
+
+                # Normalizar los valores
+                x_center_normalized = x_center / img_width
+                y_center_normalized = y_center / img_height
+                width_normalized = bb_width / img_width
+                height_normalized = bb_height / img_height
+
+                # Escribir la nueva linea en un archivo nuevo
+                f.write(f'{class_id} {x_center_normalized} {y_center_normalized} {width_normalized} {height_normalized}\n')
+
+
+
 def convert_to_yolo_format(videos_path, frames_folder, annotations_path, annotations_folder, extract_frames=True, convert_annotations=True):
     # Recorrer todos los videos en la carpeta
     if(extract_frames):
@@ -66,3 +91,5 @@ def convert_to_yolo_format(videos_path, frames_folder, annotations_path, annotat
             extract_frames_ffmpeg(video_path, frames_folder, video_id)
     if(convert_annotations):
         convert_yolo_annotations(annotations_path, annotations_folder)
+
+

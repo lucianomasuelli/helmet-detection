@@ -7,15 +7,15 @@ def train_yolo():
     model = YOLO("yolov8n.yaml")
 
     # Train the model using the 'coco8.yaml' dataset for 3 epochs
-    results = model.train(data="config.yaml", epochs=100, imgsz=640, workers=0)
+    results = model.train(data="/home/luciano/Documentos/helmet_detection/helmetDetection/config.yaml", epochs=100, imgsz=640, workers=0)
 
     # Export the model to ONNX format
     success = model.export(format="onnx")
 
 def test_yolo():
-    model = YOLO("C:/Users/User/PycharmProjects/yolov8/runs/detect/train7/weights/best.pt")
-    results = model.predict(source="videos/008.mp4", show=True, save=True, save_dir="output")
+    model = YOLO("/home/luciano/Documentos/helmet_detection/helmetDetection/codigo-fran/runs/detect/train7/weights/best.pt")
+    results = model.predict(source="/home/luciano/Documentos/helmet_detection/helmetDetection/data/videos/005.mp4", show=True, save=True, save_dir="output")
 
 
 
-test_yolo()
+train_yolo()
