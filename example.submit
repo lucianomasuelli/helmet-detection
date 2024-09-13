@@ -1,0 +1,48 @@
+#!/bin/bash
+## Nombre del trabajo en el cluster
+#SBATCH --job-name="ejemplo-lucho-fran"
+##--------------------------------
+##HACERSE EN EL DIRECTORIO SCRATCH LAS CARPETAS:
+## codigo (EL CODIGO DE LA SIAMESA)
+## virtual (donde va a estar alojado todo tu venv de python)
+## res (donde va an a ir tus resultados o sea el path de salida debe apuntar ahi)
+## out (donde se va a alojar lo que tire toko de erores y logs)
+## -----------------------------
+## Archivo donde guardar el output generado por el comando y si hay algun error
+#SBATCH --output=/scratch/out/sat_img.out
+#SBATCH --error=/scratch/out/sat_img.err
+#SBATCH --mail-type=ALL 
+#SBATCH --mail-user=frandevaux2013@gmail.com
+
+
+## Cantidad de nodos que se quieren utilizar
+#SBATCH --nodes=1
+## Cantidad de procesos que se ejecutarán por nodo,
+
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+
+##Partición o cola en la cual se quiere enviar el trabajo.
+#SBATCH --partition=XL
+
+## Listado de nodos en donde se quiere ejecutar la simulacin, puede estar
+## vacío para que Slurm los elija solo.
+## toko06 o toko07 tiene por ahora buena ejecucion
+##SBATCH --nodelist=toko06
+
+#Tiempo estimado de ejecución
+#SBATCH --time=1:00:00
+
+
+## Specifies that the job will be requeued after a node failure.
+## The default is that the job will not be requeued.
+## primero tenes que hacer tu entorno virtual e instalar todos los paquetes necesarios
+## ver https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/
+## por ejemplo python -m venv /scratch/tuusuario/virtual/pyvirtual/
+## eso se hace por linea de comandos utilizando algun programa como mobaxterm te logueas al toko
+##SBATCH --requeue
+cd /scratch/virtual/
+source bin/activate
+cd /scratch/codigo
+python3 -m  exampleToko
+deactivate
