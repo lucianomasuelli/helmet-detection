@@ -9,8 +9,8 @@
 ## out (donde se va a alojar lo que tire toko de erores y logs)
 ## -----------------------------
 ## Archivo donde guardar el output generado por el comando y si hay algun error
-#SBATCH --output=/scratch/out/sat_img.out
-#SBATCH --error=/scratch/out/sat_img.err
+#SBATCH --output=/scratch/fdevaux/out/example.out
+#SBATCH --error=/scratch/fdevaux/out/example.out
 #SBATCH --mail-type=ALL 
 #SBATCH --mail-user=frandevaux2013@gmail.com
 
@@ -41,8 +41,8 @@
 ## por ejemplo python -m venv /scratch/tuusuario/virtual/pyvirtual/
 ## eso se hace por linea de comandos utilizando algun programa como mobaxterm te logueas al toko
 ##SBATCH --requeue
-cd /scratch/virtual/
+cd /scratch/fdevaux/virtual/
 source bin/activate
-cd /scratch/codigo
+cd /scratch/fdevaux/codigo
 python3 -m  exampleToko
-deactivate
+source deactivate

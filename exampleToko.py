@@ -1,7 +1,7 @@
-import keras
+import pandas
 import time
 
-filepath = "./example.txt"
+filepath = "/scratch/fdevaux/out/example.txt"
 
 with open(filepath, 'w') as archivo:
     archivo.write('Hola, este es el contenido de mi archivo de texto.')
