@@ -1,4 +1,4 @@
-/train
+/helmet-detection-train
 /codigo-fran/labels/
 */.idea
 /.idea
@@ -9,3 +9,7 @@ train.cache
 */.ipynb_checkpoints
 */.vscode
 */.pytest
+/train_mini_images/
+/train_mini_labels/
+/train_mini_videos/
+/train_videos/

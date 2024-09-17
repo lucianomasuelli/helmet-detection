@@ -83,7 +83,7 @@ def normalize_format(annotations_folder, img_width, img_height):
 
 
 def convert_to_yolo_format(videos_path, frames_folder, annotations_path, annotations_folder, extract_frames=True, convert_annotations=True):
-    # Recorrer todos los videos en la carpeta
+    # Recorrer todos los train_videos en la carpeta
     if(extract_frames):
         for video_id, video_filename in enumerate(sorted(os.listdir(videos_path))):
             video_id += 1
@@ -91,5 +91,6 @@ def convert_to_yolo_format(videos_path, frames_folder, annotations_path, annotat
             extract_frames_ffmpeg(video_path, frames_folder, video_id)
     if(convert_annotations):
         convert_yolo_annotations(annotations_path, annotations_folder)
+        normalize_format(annotations_folder, 1920, 1080)
 
 

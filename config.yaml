@@ -1,6 +1,6 @@
-path: /home/luciano/Documentos/helmet_detection/helmetDetection/train_mini
-train: images/train
-val: images/train
+path: /scratch/fdevaux/codigo/helmet-detection/helmet-detection-test
+train: images/helmet-detection-train
+val: images/helmet-detection-train
 
 # Classes
 names:
